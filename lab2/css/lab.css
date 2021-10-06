@@ -1,0 +1,26 @@
+h1 {
+    font-family: serif;
+    color: purple;
+    font-size:  600%;
+    margin-left: 200px;
+}
+
+p {
+    font-family: fantasy;
+    font-style: italic;
+    text-indent:60px;
+    font-size: 200%;
+    margin-left: 20px;
+    margin-right:20px;
+}
+
+#content{
+    background-color: pink;
+    width:700px;
+    min-height: 1000px;
+    padding: 10px;
+    margin-left: 20px;
+    margin-top:25px;
+    border: dotted 5px red;
+    font-size: 20px;
+}
