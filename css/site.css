@@ -1,21 +1,23 @@
 html {
-  background-image: radial-gradient(#76eeff,#8aee7d);
+  background: radial-gradient(circle, rgba(0,89,181,0.19931722689075626) 30%, rgba(118,238,255,1) 100%);
 }
 
 body {
   border-radius: 25px;
-  height:1200px;
+  height: auto;
   background-color: rgba(255, 255, 255, 0.35);
   margin-left: 450px;
   margin-right: 450px;
   margin-top: 80px;
   margin-bottom: 80px;
   padding-top: 40px;
+  padding-bottom: 78px;
 }
 
 #div-portrait {
   margin-top: 38px;
   margin-right: 30px;
+  margin-left: 30px;
   float: right;
   border-radius: 25px;
   background-color: rgba(255, 255, 255, 0.4);
@@ -24,24 +26,11 @@ body {
 }
 
 #name {
-  width: 1090px;
+  width: 1060px;
 }
 
 #game {
-  width: 1090px;
-}
-
-.intro {
-  border-radius: 25px;
-  padding-top: 25px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  margin-top: 40px;
-  margin-left: 30px;
-  margin-right: 30px;
-  background-color: rgba(255, 255, 255, 0.4);
-
-  font-size: 23px;
+  width: 1060px;
 }
 
 #image-portrait {
@@ -51,4 +40,29 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+
+.block {
+  border-radius: 25px;
+  padding-top: 25px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right:30px;
+  margin-top: 40px;
+  margin-left: 30px;
+  margin-right: 30px;
+  background-color: rgba(255, 255, 255, 0.4);
+
+  font-size: 23px;
+}
+
+.meme {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.meme-comments {
+  text-align: center;
 }
