@@ -43,7 +43,7 @@ body {
 }
 
 
-.block {
+div.block {
   border-radius: 25px;
   padding-top: 25px;
   padding-bottom: 30px;
@@ -65,4 +65,13 @@ body {
 
 .meme-comments {
   text-align: center;
+}
+
+div.biaoti h1 {
+  text-align: center;
+  font-size: 60px;
+}
+
+div.biaoti {
+  margin-bottom: 80px;
 }
