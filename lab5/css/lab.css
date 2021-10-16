@@ -1,0 +1,15 @@
+#taurus {
+  width: 1000px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figcaption{
+  text-align: center;
+  font-style: italic;
+}
+
+i {
+  color: blue;
+}

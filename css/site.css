@@ -34,7 +34,6 @@ body {
 }
 
 #image-portrait {
-  border-radius: 25px;
   width: 380px;
   margin-top: 80px;
   display: block;
@@ -74,4 +73,8 @@ div.biaoti h1 {
 
 div.biaoti {
   margin-bottom: 80px;
+}
+
+img {
+    border-radius: 25px;
 }
