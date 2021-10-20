@@ -8,7 +8,7 @@
 var make = "Ford";
 var model = "Taurus";
 var color = "Black";
-var year = "1988";
+var year = 1988;
 
 //Calculate
 var age = 2021 - year;
