@@ -52,8 +52,12 @@ div.block {
   margin-left: 30px;
   margin-right: 30px;
   background-color: rgba(255, 255, 255, 0.4);
-
+  transition-duration: 0.4s;
   font-size: 23px;
+}
+
+div.block:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 .meme {
@@ -77,4 +81,23 @@ div.biaoti {
 
 img {
     border-radius: 25px;
+}
+
+button {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 10px 10px;
+  padding: 10px;
+  border-width: thin;
+  cursor: pointer;
+  border-radius: 8px;
+  background: rgb(255,255,255);
+  border: 1px solid rgb(0, 150, 220);
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: rgb(0, 150, 220);
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  color: rgb(255, 255, 255);
 }
