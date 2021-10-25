@@ -2,18 +2,6 @@ html {
   background: radial-gradient(circle, rgba(0,89,181,0.19931722689075626) 30%, rgba(118,238,255,1) 100%);
 }
 
-body {
-  border-radius: 25px;
-  height: auto;
-  background-color: rgba(255, 255, 255, 0.35);
-  margin-left: 450px;
-  margin-right: 450px;
-  margin-top: 80px;
-  margin-bottom: 80px;
-  padding-top: 40px;
-  padding-bottom: 78px;
-}
-
 #div-portrait {
   margin-top: 38px;
   margin-right: 30px;
@@ -23,7 +11,7 @@ body {
   background-color: rgba(255, 255, 255, 0.4);
   height:685px;
   width: 435px;
-  transition-duration: 0.4s;
+  transition-duration: 0.5s;
 }
 
 #div-portrait:hover {
@@ -54,10 +42,10 @@ div.block {
   padding-left: 30px;
   padding-right:30px;
   margin-top: 40px;
-  margin-left: 30px;
-  margin-right: 30px;
+  margin-left: 200px;
+  margin-right: 200px;
   background-color: rgba(255, 255, 255, 0.4);
-  transition-duration: 0.4s;
+  transition: 0.5s;
   font-size: 23px;
 }
 
@@ -98,11 +86,98 @@ button {
   border-radius: 8px;
   background: rgb(255,255,255);
   border: 1px solid rgb(0, 150, 220);
-  transition-duration: 0.4s;
+  transition-duration: 0.5s;
 }
 
 button:hover {
   background-color: rgb(0, 150, 220);
   box-shadow: 0 7px 10px 0 rgba(0,89,181,0.3), 0 9px 15px 0 rgba(0,89, 181,0.25);
   color: rgb(255, 255, 255);
+}
+
+
+/* The side navigation menu */
+.sidenav {
+  height: 90%; /* 100% Full-height */
+  width: 10px; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 50%;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.65);
+
+  /* overflow-x: hidden;
+  overflow-y: auto; */
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+
+  box-shadow: 0 7px 10px 0 rgba(0,89,181,0.3), 0 9px 15px 0 rgba(0,89, 181,0.25);
+
+  -ms-transform: translate(0,-50%);
+  transform: translate(0,-50%);
+}
+.sidenav::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* The navigation menu links */
+.sidenav .links {
+  text-align: left;
+  padding: 20px 20px 20px 20px;
+  text-decoration: none;
+  font-size: 25px;
+  color: rgba(0,90,180,0.9);
+  display: block;
+  transition: 0.2s;
+  visibility: hidden;
+}
+/* When you mouse over the navigation links, change their color */
+.sidenav .links:hover {
+  transform: translateX(20px);
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+span {
+  position:fixed;
+  margin-left: 2px;
+  background-color: rgba(255, 255, 255, 0.65);
+  font-size: 30px;
+  top: 50%;
+  transition: 0.5s;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  height: 50px;
+  width: 17px;
+  padding-left: 0px;
+  color: rgba(0,0,0,0.45);
+  box-shadow: 3px 5px 10px 0 rgba(0,89,181,0.3), 0 9px 15px 0 rgba(0,89, 181,0.25);
+}
+span:hover {
+  cursor: pointer;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: 0.5s;
+  padding: 20px;
+}
+
+hr {
+  width: 150px;
+  margin-left: 20px;
+  visibility: hidden;
 }

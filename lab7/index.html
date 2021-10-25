@@ -7,33 +7,65 @@
     <title>Lab7: Functions</title>
   </head>
   <body>
-    <div class="biaoti">
-      <h1>Lab7: Functions</h1>
+
+    <div id="mySidenav" class="sidenav">
+      <a class="links" href="../index.html">Home</a>
+      <hr class="sidenavhr">
+      <a class="links" href="../lab2/index.html">Lab2:<br>Your First HTML</a>
+      <hr class="sidenavhr">
+      <a class="links" href="../lab3/index.html">Lab3:<br>File Structure</a>
+      <hr class="sidenavhr">
+      <a class="links" href="../lab4/index.html">Lab4:<br>Pseudocoding and Problem-solving</a>
+      <hr class="sidenavhr">
+      <a class="links" href="../lab5/index.html">Lab5:<br>Data Type and Variables</a>
+      <hr class="sidenavhr">
+      <a class="links" href="../lab6/index.html">Lab6:<br>Arrays and Objects</a>
+      <hr class="sidenavhr">
+      <a class="links" href="../lab7/index.html">Lab7:<br>Functions</a>
+      <hr class="sidenavhr">
+      <a class="links" href="../test/index.html">test_placeholder</a>
+      <hr class="sidenavhr">
+      <a class="links" href="../test/index.html">test_placeholder</a>
+      <hr class="sidenavhr">
+      <a class="links" href="../test/index.html">test_placeholder</a>
+      <hr class="sidenavhr">
+      <a class="links" href="../test/index.html">test_placeholder</a>
+      <hr class="sidenavhr">
+      <a class="links" href="../test/index.html">test_placeholder</a>
     </div>
 
-    <div class="block">
-      <h1>Challenge</h1>
-      <p>The basic tasks are pretty easy. The bonus tasks took me a while to solve. I had no clue on how to solve any of the bonus tasks at the beginning. So I searched for Wes Github to find his Javascript code for this lab. I read all of his code and searched what I didn't understand on Google. I didn't just copy and paste Wes codes. I tried to understand them and came up with my own solutions.Especially for the "upperCaseFirstLetter()" function, I use Wes codes as a kind of guideline, and used a different way to complete the function.</p>
-      <p>I also added some extra features. I added buttons to allow users to have further actions after putting in their names. If they don't like the new names, regeneration and putting in other names are possible for users. I also decorated the buttons to make them look fancy. </p>
-    </div>
+    <span id="menubutton" onclick="sidenavControl()">&Rang;</span>
 
-    <div class="block">
-      <h1>Problems</h1>
-      <p>How to get the buttons work properly was the biggest problem I had. I searched on Google about how to link buttons and JS together so that when I click on that button it can execute some JS codes, and how to use "document.getElementById()" so that I can put the output of my JS code to wherever I want. Those now work well.</p>
-    </div>
+    <script type="text/javascript" src="../js/site.js"></script>
 
-    <div class="block">
-      <h1>Results</h1>
-      <p>The page gives a random name based on the user's input. If the user doesn't like the generated name, he can hit the "Generate Another One" button to get a new random name. If the user wants to use another name, he can then press the "Use Other Names" button to put in other names.</p>
-      <h2>Script Output:</h2>
-      <div class="js">
-        <h4>Your New Name is: </h4>
-        <p id="js_output"></p>
-        <script type="text/javascript" src="js/lab.js"></script>
-        <h5>Don't Like It?</h5>
-        <button type="button" name="button" onclick="generateAnotherOne()">Generate Another One</button>
-        <button type="button" name="button" onclick="useOtherNames()">Use Other Names</button>
+    <div id="main">
+      <div class="biaoti">
+        <h1>Lab7: Functions</h1>
       </div>
+
+      <div class="block">
+        <h1>Challenge</h1>
+        <p>The basic tasks are pretty easy. The bonus tasks took me a while to solve. I had no clue on how to solve any of the bonus tasks at the beginning. So I searched for Wes Github to find his Javascript code for this lab. I read all of his code and searched what I didn't understand on Google. I didn't just copy and paste Wes codes. I tried to understand them and came up with my own solutions.Especially for the "upperCaseFirstLetter()" function, I use Wes codes as a kind of guideline, and used a different way to complete the function.</p>
+        <p>I also added some extra features. I added buttons to allow users to have further actions after putting in their names. If they don't like the new names, regeneration and putting in other names are possible for users. I also decorated the buttons to make them look fancy. </p>
+      </div>
+
+      <div class="block">
+        <h1>Problems</h1>
+        <p>How to get the buttons work properly was the biggest problem I had. I searched on Google about how to link buttons and JS together so that when I click on that button it can execute some JS codes, and how to use "document.getElementById()" so that I can put the output of my JS code to wherever I want. Those now work well.</p>
+      </div>
+
+      <div class="block">
+        <h1>Results</h1>
+        <p>The page gives a random name based on the user's input. If the user doesn't like the generated name, he can hit the "Generate Another One" button to get a new random name. If the user wants to use another name, he can then press the "Use Other Names" button to put in other names.</p>
+        <h2>Script Output:</h2>
+        <div class="js">
+          <h4>Your New Name is: </h4>
+          <p id="js_output"></p>
+          <script type="text/javascript" src="js/lab.js"></script>
+          <h5>Don't Like It?</h5>
+          <button type="button" name="button" onclick="generateAnotherOne()">Generate Another One</button>
+          <button type="button" name="button" onclick="useOtherNames()">Use Other Names</button>
+        </div>
       </div>
     </div>
   </body>
