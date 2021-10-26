@@ -15,6 +15,9 @@ body {
     background: linear-gradient(45deg, rgba(199,255,193,0.6) 0%, rgba(205,255,226,0.6) 25%, rgba(153,237,255,0.6) 50%, rgba(197,192,255,0.6) 75%, rgba(246,196,255,0.6) 100%);
     background-size: 400% 400%;
     animation: gradient 60s ease infinite;
+
+    transition: 0.5s;
+    
 }
 
 @keyframes gradient {
@@ -267,5 +270,5 @@ hr {
 
   margin-bottom: 100px;
 
-  filter: blur(10px);
+  filter: blur(10px) grayscale(100%);
 }

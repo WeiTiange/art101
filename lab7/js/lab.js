@@ -103,7 +103,7 @@ function generateAnotherOne() {
 
 function popup() {
   document.getElementById("main").setAttribute("id", "mainblur");
-  document.getElementById("popups").style.marginTop = "";
+  document.getElementById("popups").style.marginTop = "-300px";
   var popups = document.getElementsByClassName("popups");
   for (var i = 0; i < popups.length; i++) {
     popups[i].style.boxShadow = "";

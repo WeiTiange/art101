@@ -32,6 +32,7 @@ function sidenavControl() {
     document.getElementById("menubutton").style.marginLeft = "242px";
     document.getElementById("popups").style.marginLeft = "250px"
     document.getElementById("main").setAttribute("id", "mainblur");
+    document.body.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
 
     sidenavInOut = true;
 
@@ -48,10 +49,11 @@ function sidenavControl() {
     }
 
     document.getElementById("mainblur").setAttribute("id", "main");
-    document.getElementById("mySidenav").style.width = "10px";
-    document.getElementById("main").style.marginLeft = "0";
-    document.getElementById("popups").style.marginLeft = "-100px"
-    document.getElementById("menubutton").style.marginLeft = "2px";
+    document.getElementById("mySidenav").style.width = "";
+    document.getElementById("main").style.marginLeft = "";
+    document.getElementById("popups").style.marginLeft = ""
+    document.getElementById("menubutton").style.marginLeft = "";
+    document.body.style.backgroundColor = ""
 
     sidenavInOut = false;
   }
