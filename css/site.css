@@ -2,93 +2,120 @@ html {
   background: radial-gradient(circle, rgba(0,89,181,0.19931722689075626) 30%, rgba(118,238,255,1) 100%);
 }
 
-#div-portrait {
-  margin-top: 38px;
-  margin-right: 30px;
-  margin-left: 30px;
-  float: right;
-  border-radius: 25px;
-  background-color: rgba(255, 255, 255, 0.4);
-  height:685px;
-  width: 435px;
-  transition-duration: 0.5s;
+/* ----------------------------------------------------------------------- */
+/* Homepage Only */
+/* ----------------------------------------------------------------------- */
+/* Move all the cards. */
+#homepagelayout {
+  margin-top: 150px;
 }
 
+/* Photo */
+#div-portrait {
+  height:655px;
+  width: 435px;
+
+  margin-top: auto;
+  margin-right: 200px;
+  margin-left: 30px;
+
+  float: right; /* Move to the right */
+
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.4);
+
+  transition-duration: 0.5s;
+}
+/* Photo on hover */
 #div-portrait:hover {
   box-shadow: 0 12px 16px 0 rgba(0,89,181,0.1), 0 17px 50px 0 rgba(0,89, 181,0.05);
 }
-
-#name {
-  width: 1060px;
-}
-
-#game {
-  width: 1060px;
-}
-
+/* The photo itself */
 #image-portrait {
   width: 380px;
   margin-top: 80px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+
+  display: block; /* Horizontally center the photo */
+  margin-left: auto; /* Horizontally center the photo */
+  margin-right: auto; /* Horizontally center the photo */
+}
+
+#name {
+  width: 1610px;
+}
+#game {
+  width: 1610px;
 }
 
 
+/* ----------------------------------------------------------------------- */
+/* Div formats that are applied on all the pages */
+/* ----------------------------------------------------------------------- */
 div.block {
+  font-size: 23px;
+
   border-radius: 25px;
+
   padding-top: 25px;
   padding-bottom: 30px;
   padding-left: 30px;
   padding-right:30px;
+
   margin-top: 40px;
   margin-left: 200px;
   margin-right: 200px;
-  background-color: rgba(255, 255, 255, 0.4);
-  transition: 0.5s;
-  font-size: 23px;
-}
 
+  background-color: rgba(255, 255, 255, 0.4);
+
+  transition: 0.5s;
+}
 div.block:hover {
   box-shadow: 0 12px 16px 0 rgba(0,89,181,0.1), 0 17px 50px 0 rgba(0,89, 181,0.05);
 }
 
+/* Formats of the memes on some of the page */
 .meme {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-
 .meme-comments {
   text-align: center;
 }
 
+/* Formats of the heading of each lab page */
 div.biaoti h1 {
   text-align: center;
   font-size: 60px;
 }
-
 div.biaoti {
   margin-bottom: 80px;
 }
 
+/* Make every image round corner */
 img {
     border-radius: 25px;
 }
 
+/* Formats of all the buttons */
 button {
   font-size: 15px;
   font-weight: bold;
+
   margin: 10px 10px;
+
   padding: 10px;
-  border-width: thin;
+
   cursor: pointer;
+
+  border-width: thin;
   border-radius: 8px;
-  background: rgb(255,255,255);
   border: 1px solid rgb(0, 150, 220);
+
+  background: rgb(255,255,255);
+
   transition-duration: 0.5s;
 }
-
 button:hover {
   background-color: rgb(0, 150, 220);
   box-shadow: 0 7px 10px 0 rgba(0,89,181,0.3), 0 9px 15px 0 rgba(0,89, 181,0.25);
@@ -96,45 +123,52 @@ button:hover {
 }
 
 
+/* ----------------------------------------------------------------------- */
 /* The side navigation menu */
+/* ----------------------------------------------------------------------- */
 .sidenav {
   height: 90%; /* 100% Full-height */
   width: 10px; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
   z-index: 1; /* Stay on top */
-  top: 50%;
-  left: 0;
-  background-color: rgba(255, 255, 255, 0.65);
 
-  /* overflow-x: hidden;
-  overflow-y: auto; */
-  overflow-x: hidden;
-  overflow-y: scroll;
+  position: fixed; /* Stay in place */
+  left: 0; /*Vertically center */
+  top: 50%; /*Vertically center */
+  -ms-transform: translate(0,-50%); /*Vertically center */
+  transform: translate(0,-50%); /*Vertically center */
+
+
+  overflow-x: hidden; /* Work with ".sidenav::-webkit-scrollbar" */
+  overflow-y: scroll; /* Hide x,y scroll bar, while y still able to scroll */
 
   padding-top: 60px; /* Place content 60px from the top */
+
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
 
+  background-color: rgba(255, 255, 255, 0.65);
   box-shadow: 0 7px 10px 0 rgba(0,89,181,0.3), 0 9px 15px 0 rgba(0,89, 181,0.25);
-
-  -ms-transform: translate(0,-50%);
-  transform: translate(0,-50%);
 }
+/* Hide scroll bar on Chrome but still able to scroll */
 .sidenav::-webkit-scrollbar {
     display: none;
 }
-
-
 /* The navigation menu links */
 .sidenav .links {
-  text-align: left;
-  padding: 20px 20px 20px 20px;
-  text-decoration: none;
   font-size: 25px;
-  color: rgba(0,90,180,0.9);
+  text-decoration: none;
+
   display: block;
-  transition: 0.2s;
+  text-align: left;
+
+  padding: 20px 20px 20px 20px;
+
+  color: rgba(0,90,180,0.9);
+
+  transition: 0.5s;
+
   visibility: hidden;
 }
 /* When you mouse over the navigation links, change their color */
@@ -142,42 +176,42 @@ button:hover {
   transform: translateX(20px);
 }
 
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
+/* Format of the little handle of the side navigation bar */
 span {
-  position:fixed;
   margin-left: 2px;
-  background-color: rgba(255, 255, 255, 0.65);
+
   font-size: 30px;
+
+  position:fixed;
   top: 50%;
+  -ms-transform: translate(0,-50%);
+  transform: translate(0,-50%);
+
   transition: 0.5s;
+
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
-  height: 50px;
+
+  height: 100px;
   width: 17px;
-  padding-left: 0px;
+
   color: rgba(0,0,0,0.45);
+  background-color: rgba(255, 255, 255, 0.65);
   box-shadow: 3px 5px 10px 0 rgba(0,89,181,0.3), 0 9px 15px 0 rgba(0,89, 181,0.25);
 }
 span:hover {
   cursor: pointer;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-  transition: 0.5s;
-  padding: 20px;
-}
-
+/* Lines in sidenav */
 hr {
   width: 150px;
   margin-left: 20px;
   visibility: hidden;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: 0.5s;
+  padding: 20px;
 }
