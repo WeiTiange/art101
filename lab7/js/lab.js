@@ -7,11 +7,26 @@
 
 //Functions:
 
-//Popup prompt window to get user inputs.
-function popWindow() {
-  var userInput = window.prompt("Hi! Please tell me your name so I can fix it.");
-  return userInput.split("");
-};
+function popupSubmitButton() {
+  userName = document.getElementById("inputname").value.split("");
+  var newName = shuffleArray(sortUserName(userName));
+  newName = upperCaseFirstLetter(newName);
+  document.getElementById("js_output").innerHTML = newName.join("");
+
+  document.getElementById("popups").style.marginTop = "300px";
+  document.getElementById("mainblur").setAttribute("id", "main");
+
+  var popups = document.getElementsByClassName("popups");
+  for (var i = 0; i < popups.length; i++) {
+    popups[i].style.boxShadow = "0 0 0 0 rgba(255,255,255,0)";
+    popups[i].style.color = "rgba(255,255,255,0)";
+    popups[i].style.backgroundColor = "rgba(255,255,255,0)";
+    popups[i].style.borderColor = "rgba(255,255,255,0)";
+    popups[i].style.visibility = "hidden";
+  }
+
+
+}
 
 //Sort an array ignoring cases.
 function sortUserName(arr) {
@@ -86,19 +101,23 @@ function generateAnotherOne() {
   document.getElementById("js_output").innerHTML = newName.join("");
 };
 
-//Allow user to input another name when the button "Use Other Names" is clicked.
-function useOtherNames() {
-  userName = popWindow();
-  var newName = shuffleArray(userName);
-  newName = upperCaseFirstLetter(newName);
-  document.getElementById("js_output").innerHTML = newName.join("");
-};
+function popup() {
+  document.getElementById("main").setAttribute("id", "mainblur");
+  document.getElementById("popups").style.marginTop = "";
+  var popups = document.getElementsByClassName("popups");
+  for (var i = 0; i < popups.length; i++) {
+    popups[i].style.boxShadow = "";
+    popups[i].style.color = "";
+    popups[i].style.backgroundColor = "";
+    popups[i].style.borderColor = "";
+    popups[i].style.visibility = "visible";
+  }
+  document.getElementById("inputname").value = "";
+}
 
 //End of Funcitons.
 
 
 
-
-var userName = popWindow();
-
-firstTimeRun();
+popup();
+var userName;

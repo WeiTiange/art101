@@ -4,9 +4,16 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="../css/site.css">
     <link rel="stylesheet" href="css/lab.css">
+    <link rel="stylesheet" href="../css/popup.css">
     <title>Lab7: Functions</title>
   </head>
   <body>
+
+    <div id="popups" class="popups">
+      <h3 id="popuptext" class="popups">Hi! Please tell me your name so I can fix it.</h3>
+      <input type="text" id="inputname" class="popups">
+      <button type="button" name="button" id="submitbutton" class="popups" onclick="popupSubmitButton()">Submit</button>
+    </div>
 
     <div id="mySidenav" class="sidenav">
       <a class="links" href="../index.html">Home</a>
@@ -64,7 +71,7 @@
           <script type="text/javascript" src="js/lab.js"></script>
           <h5>Don't Like It?</h5>
           <button type="button" name="button" onclick="generateAnotherOne()">Generate Another One</button>
-          <button type="button" name="button" onclick="useOtherNames()">Use Other Names</button>
+          <button type="button" name="button" onclick="popup()">Use Other Names</button>
         </div>
       </div>
     </div>

@@ -1,0 +1,59 @@
+div.popups {
+  display: block;
+
+  transition: 0.5s;
+
+  z-index: 10;
+
+  width: 500px;
+  height: 280px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin-left: -250px;
+  margin-top: -180px;
+
+  background-color: white;
+
+  border-radius: 10px;
+
+  box-shadow: 0 12px 16px 0 rgba(0,89,181,0.1), 0 17px 50px 0 rgba(0,89, 181,0.05);
+
+  text-align: center;
+}
+
+div.popups h3 {
+  display: block;
+  margin: 50px 40px 0 40px;
+  font-size: 25px;
+  color: black;
+}
+
+div.popups button {
+  display: inline;
+  height: 38px;
+
+  margin-top: 70px;
+  margin-left: 20px;
+}
+
+div.popups button:hover {
+  background-color: rgb(0, 150, 220);
+  color: rgb(255, 255, 255);
+}
+
+div.popups input {
+  display: inline;
+
+  border-radius: 10px;
+
+  margin-top: 70px;
+  margin-left: 10px;
+
+  height: 30px;
+  width: 300px;
+
+  border-color: rgba(0, 150, 220, 1);
+}
