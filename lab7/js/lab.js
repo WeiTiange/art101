@@ -114,5 +114,6 @@ function popup() {
 
 
 
-popup();
+
+setTimeout(firstTimeRun(), 2000);
 var userName;
