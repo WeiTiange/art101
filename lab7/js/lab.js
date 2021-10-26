@@ -15,6 +15,7 @@ function popupSubmitButton() {
 
   document.getElementById("popups").style.marginTop = "300px";
   document.getElementById("mainblur").setAttribute("id", "main");
+  document.body.style.backgroundColor = "";
 
   var popups = document.getElementsByClassName("popups");
   for (var i = 0; i < popups.length; i++) {
@@ -87,13 +88,6 @@ function upperCaseFirstLetter(arr) {
 
 };
 
-//The main function that drives other functions when the page is loaded for the first time.
-function firstTimeRun() {
-  var newName = shuffleArray(userName);
-  newName = upperCaseFirstLetter(newName);
-  document.getElementById("js_output").innerHTML = newName.join("");
-};
-
 //Generate a new name when the button "Generate Another One" is clicked.
 function generateAnotherOne() {
   var newName = shuffleArray(userName);
@@ -102,6 +96,7 @@ function generateAnotherOne() {
 };
 
 function popup() {
+  document.body.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
   document.getElementById("main").setAttribute("id", "mainblur");
   document.getElementById("popups").style.marginTop = "-300px";
   var popups = document.getElementsByClassName("popups");
