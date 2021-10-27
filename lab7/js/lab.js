@@ -3,30 +3,109 @@
 // Description:
 
 
-
+var isClicked;
 
 //Functions:
 
+function hover() {
+  isClicked = false;
+  document.getElementById("popupbutton").style.backgroundColor = "rgba(0, 150, 220, 1)";
+  document.getElementById("popupbutton").style.color = "rgba(255, 255, 255, 1)";
+}
+
+function notHover() {
+  if (isClicked === true) {
+    document.getElementById("popupbutton").style.color = "rgba(0, 0, 0, 0)";
+    document.getElementById("popupbutton").style.background = "rgba(255,255,255,0)";
+  } else {
+    document.getElementById("popupbutton").style.backgroundColor = "";
+    document.getElementById("popupbutton").style.color = "rgba(0, 0, 0, 1)";
+  }
+
+}
+
+function hidePopupWindow() {
+  isClicked = true;
+
+  // popupbutton
+  document.getElementById("popupbutton").style.visibility = "hidden";
+  document.getElementById("popupbutton").style.color = "rgba(0, 0, 0, 0)";
+  document.getElementById("popupbutton").style.border = "1px solid rgba(0, 150, 220, 0)";
+  document.getElementById("popupbutton").style.background = "rgba(255,255,255,0)";
+
+  // popupwindow
+  document.getElementById("popupwindow").style.visibility = "hidden";
+  document.getElementById("popupwindow").style.backgroundColor = "rgba(255, 255, 255, 0)";
+  document.getElementById("popupwindow").style.boxShadow = "0 12px 16px 0 rgba(0,89,181,0), 0 17px 50px 0 rgba(0,89, 181,0)";
+
+  // popuptext
+  document.getElementById("popuptext").style.visibility = "hidden";
+  document.getElementById("popuptext").style.color = "rgba(0, 0, 0, 0)";
+
+  // popupinput
+  document.getElementById("popupinput").style.visibility = "hidden";
+  document.getElementById("popupinput").style.borderColor = "rgba(0, 150, 220, 0)";
+  document.getElementById("popupinput").style.backgroundColor = "rgba(255, 255, 255, 0)";
+  document.getElementById("popupinput").style.color= "rgba(255, 255, 255, 0)";
+
+  movePopupWindow("300px");
+
+  document.getElementById("main").style.filter = "";
+  document.body.style.backgroundColor = "";
+  var blocks = document.getElementsByClassName("block");
+  for (var i = 0; i < blocks.length; i++) {
+    blocks[i].style.backgroundColor = ""
+  }
+}
+
+function showPopupWindow() {
+  // popupbutton
+  document.getElementById("popupbutton").style.visibility = "visible";
+  document.getElementById("popupbutton").style.color = "rgba(0, 0, 0, 1)";
+  document.getElementById("popupbutton").style.border = "1px solid rgba(0, 150, 220, 1)";
+  document.getElementById("popupbutton").style.background = "rgba(255,255,255,1)";
+
+  // popupwindow
+  document.getElementById("popupwindow").style.visibility = "visible";
+  document.getElementById("popupwindow").style.backgroundColor = "rgba(255, 255, 255, 1)";
+  document.getElementById("popupwindow").style.boxShadow = "0 12px 16px 0 rgba(0,89,181,0.3), 0 17px 50px 0 rgba(0,89, 181,0.1)";
+
+  // popuptext
+  document.getElementById("popuptext").style.visibility = "visible";
+  document.getElementById("popuptext").style.color = "rgba(0, 0, 0, 1)";
+
+  // popupinput
+  document.getElementById("popupinput").style.visibility = "visible";
+  document.getElementById("popupinput").style.borderColor = "rgba(0, 150, 220, 1)";
+  document.getElementById("popupinput").style.backgroundColor = "rgba(255, 255, 255, 1)";
+  document.getElementById("popupinput").style.color = "rgba(0, 0, 0, 1)";
+
+  movePopupWindow("-180px");
+
+  document.getElementById("main").style.filter = "blur(20px)";
+  document.body.style.backgroundColor = "rgba(0, 0, 0, 1)";
+  var blocks = document.getElementsByClassName("block");
+  for (var i = 0; i < blocks.length; i++) {
+    blocks[i].style.backgroundColor = "rgba(0, 0, 0, 0.1)";
+  }
+
+}
+
+function movePopupWindow(targetLocation) {
+  document.getElementById("popupwindow").style.marginTop = targetLocation;
+}
+
+function changeButtonText() {
+  document.getElementById("popupbutton").innerText = "Submit";
+}
+
 function popupSubmitButton() {
-  userName = document.getElementById("inputname").value.split("");
+  userName = document.getElementById("popupinput").value.split("");
   var newName = shuffleArray(sortUserName(userName));
   newName = upperCaseFirstLetter(newName);
   document.getElementById("js_output").innerHTML = newName.join("");
 
-  document.getElementById("popups").style.marginTop = "300px";
-  document.getElementById("mainblur").setAttribute("id", "main");
-  document.body.style.backgroundColor = "";
-
-  var popups = document.getElementsByClassName("popups");
-  for (var i = 0; i < popups.length; i++) {
-    popups[i].style.boxShadow = "0 0 0 0 rgba(255,255,255,0)";
-    popups[i].style.color = "rgba(255,255,255,0)";
-    popups[i].style.backgroundColor = "rgba(255,255,255,0)";
-    popups[i].style.borderColor = "rgba(255,255,255,0)";
-    popups[i].style.visibility = "hidden";
-  }
-
-
+  hidePopupWindow();
 }
 
 //Sort an array ignoring cases.
@@ -95,19 +174,25 @@ function generateAnotherOne() {
   document.getElementById("js_output").innerHTML = newName.join("");
 };
 
-function popup() {
-  document.body.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
-  document.getElementById("main").setAttribute("id", "mainblur");
-  document.getElementById("popups").style.marginTop = "-300px";
-  var popups = document.getElementsByClassName("popups");
-  for (var i = 0; i < popups.length; i++) {
-    popups[i].style.boxShadow = "";
-    popups[i].style.color = "";
-    popups[i].style.backgroundColor = "";
-    popups[i].style.borderColor = "";
-    popups[i].style.visibility = "visible";
+function inputPressKeys() {
+  var input = document.getElementById("popupinput");
+
+  // press "enter"
+  input.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+      document.getElementById("popupbutton").click();
+    }
+  })
+
+  var isPopupVisible = document.getElementById("popupwindow").style.visibility;
+  if (isPopupVisible === "visible") {
+    document.addEventListener("keyup", function(event) {
+      if (event.keyCode === 27) {
+        hidePopupWindow();
+      }
+    })
   }
-  document.getElementById("inputname").value = "";
+
 }
 
 //End of Funcitons.
@@ -115,5 +200,7 @@ function popup() {
 
 
 
-setTimeout(firstTimeRun(), 2000);
+setTimeout(showPopupWindow, 1000);
+setTimeout(inputPressKeys, 1005);
+
 var userName;

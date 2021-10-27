@@ -34,15 +34,15 @@
           <script type="text/javascript" src="js/lab.js"></script>
           <h5>Don't Like It?</h5>
           <button type="button" name="button" onclick="generateAnotherOne()">Generate Another One</button>
-          <button type="button" name="button" onclick="popup()">Use Other Names</button>
+          <button type="button" name="button" onclick="showPopupWindow()">Use Other Names</button>
         </div>
       </div>
     </div>
   </body>
-  <div id="popups" class="popups">
+  <div id="popupwindow" class="popups" onkeypress="">
     <h3 id="popuptext" class="popups">Hi! Please tell me your name so I can fix it.</h3>
-    <input type="text" id="inputname" class="popups">
-    <button type="button" name="button" id="submitbutton" class="popups" onclick="popupSubmitButton()">Submit</button>
+    <input type="text" id="popupinput" class="popups" oninput="changeButtonText()">
+    <button type="button" name="button" id="popupbutton" class="popups" onclick="popupSubmitButton()" onmouseover="hover()" onmouseout="notHover()">Cancel</button>
   </div>
 
   <div id="mySidenav" class="sidenav">

@@ -14,10 +14,10 @@ body::-webkit-scrollbar {
 body {
     background: linear-gradient(45deg, rgba(199,255,193,0.6) 0%, rgba(205,255,226,0.6) 25%, rgba(153,237,255,0.6) 50%, rgba(197,192,255,0.6) 75%, rgba(246,196,255,0.6) 100%);
     background-size: 400% 400%;
-    animation: gradient 60s ease infinite;
+    animation: gradient 90s ease infinite;
 
     transition: 0.5s;
-    
+
 }
 
 @keyframes gradient {
@@ -143,9 +143,9 @@ button {
   border-radius: 8px;
   border: 1px solid rgb(0, 150, 220);
 
-  background: rgb(255,255,255);
+  background: rgba(255,255,255,1);
 
-  transition-duration: 0.5s;
+  transition: 0.5s;
 }
 div.block button:hover {
   background-color: rgb(0, 150, 220);
@@ -153,6 +153,9 @@ div.block button:hover {
   color: rgb(255, 255, 255);
 }
 
+p {
+  transition: 0.5s;
+}
 
 /* ----------------------------------------------------------------------- */
 /* The side navigation menu */
@@ -260,15 +263,4 @@ hr {
 
   margin-bottom: 100px;
 
-}
-
-#mainblur {
-  z-index: 0;
-
-  transition: 0.5s;
-  padding: 20px;
-
-  margin-bottom: 100px;
-
-  filter: blur(10px) grayscale(100%);
 }

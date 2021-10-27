@@ -1,4 +1,4 @@
-div.popups {
+#popupwindow {
   display: block;
 
   transition: 0.5s;
@@ -13,38 +13,48 @@ div.popups {
   left: 50%;
 
   margin-left: -250px;
-  margin-top: -180px;
+  margin-top: 300px;
 
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
 
   border-radius: 10px;
 
-  box-shadow: 0 12px 16px 0 rgba(0,89,181,0.3), 0 17px 50px 0 rgba(0,89, 181,0.1);
+  box-shadow: 0 12px 16px 0 rgba(0,89,181,0), 0 17px 50px 0 rgba(0,89, 181,0);
 
   text-align: center;
 }
 
-div.popups h3 {
+#popuptext {
   display: block;
   margin: 50px 40px 0 40px;
   font-size: 25px;
-  color: black;
+  color: rgba(0, 0, 0, 0);
+
+  : 0.3s;
 }
 
-div.popups button {
+#popupbutton {
   display: inline;
   height: 38px;
 
   margin-top: 70px;
   margin-left: 20px;
+
+  color: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 150, 220, 0);
+  background: rgba(255,255,255,0);
+
+  transition: 0.5s;
 }
 
-div.popups button:hover {
-  background-color: rgb(0, 150, 220);
-  color: rgb(255, 255, 255);
+#popupbutton:hover {
+  background-color: rgba(0, 150, 220, 1);
+  color: rgba(255, 255, 255, 1);
+
+  visibility: visible;
 }
 
-div.popups input {
+#popupinput {
   display: inline;
 
   border-radius: 10px;
@@ -55,5 +65,8 @@ div.popups input {
   height: 30px;
   width: 300px;
 
-  border-color: rgba(0, 150, 220, 1);
+  border-color: rgba(0, 150, 220, 0);
+  background-color: rgba(255, 255, 255, 0);
+
+  transition: 0.5s;
 }
