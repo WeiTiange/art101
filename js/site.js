@@ -30,7 +30,10 @@ function sidenavControl() {
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
     document.getElementById("menubutton").style.marginLeft = "242px";
-    document.getElementById("popupwindow").style.marginLeft = "-125px"
+    if (document.getElementById("popupwindow") !== null) {
+      document.getElementById("popupwindow").style.marginLeft = "-125px"
+    }
+
 
     sidenavInOut = true;
 
@@ -48,7 +51,9 @@ function sidenavControl() {
 
     document.getElementById("mySidenav").style.width = "";
     document.getElementById("main").style.marginLeft = "";
-    document.getElementById("popupwindow").style.marginLeft = ""
+    if (document.getElementById("popupwindow") !== null) {
+      document.getElementById("popupwindow").style.marginLeft = ""
+    }
     document.getElementById("menubutton").style.marginLeft = "";
 
     sidenavInOut = false;
