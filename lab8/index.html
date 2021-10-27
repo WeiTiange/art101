@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/site.css">
+    <link rel="stylesheet" href="css/lab.css">
+    <title>Lab 8: Anon Functions and Callbacks</title>
+    <script type="text/javascript" src="../js/site.js"></script>
+    <script type="text/javascript" src="js/lab.js"></script>
+  </head>
+  <body>
+    <div id="main">
+      <div class="biaoti">
+        <h1>Lab 8: Anon Functions and Callbacks</h1>
+      </div>
+
+      <div class="block">
+        <h1>Challenge</h1>
+        <p>Writing my own callback function took me a while. When I tried to call the function within the javascript file, it failed all the time. Then I figured out that this time we put scripts under "head", so that it's rendered before the page loads. I then used <i>window.onload</i> to call the functions after the page is loaded.</p>
+      </div>
+
+      <div class="block">
+        <h1>Problems</h1>
+        <p>No problem.</p>
+      </div>
+
+      <div class="block">
+        <h1>Results</h1>
+        <p id="js_output1"></p>
+        <p id="js_output2"></p>
+        <p id="js_output3"></p>
+        <p id="js_output4"></p>
+        <p id="js_output5"></p>
+        <p id="js_output6">
+          My callback function:<br><br>
+          <i>function testCallbackFunction(para, callback) {<br><br>
+            if (typeof callback == "function") {<br><br>
+              document.getElementById("js_output5").innerHTML = "This is the test of callback checkDivideByThree(10): " + callback(para);
+            }
+          }<i><br><br>
+        </p>
+        <script type="text/javascript">
+          window.onload = runInHTML;
+        </script>
+      </div>
+    </div>
+  </body>
+
+
+  <div id="mySidenav" class="sidenav">
+    <a class="links" href="../index.html">Home</a>
+    <hr class="sidenavhr">
+    <a class="links" href="../lab2/index.html">Lab2:<br>Your First HTML</a>
+    <hr class="sidenavhr">
+    <a class="links" href="../lab3/index.html">Lab3:<br>File Structure</a>
+    <hr class="sidenavhr">
+    <a class="links" href="../lab4/index.html">Lab4:<br>Pseudocoding and Problem-solving</a>
+    <hr class="sidenavhr">
+    <a class="links" href="../lab5/index.html">Lab5:<br>Data Type and Variables</a>
+    <hr class="sidenavhr">
+    <a class="links" href="../lab6/index.html">Lab6:<br>Arrays and Objects</a>
+    <hr class="sidenavhr">
+    <a class="links" href="../lab7/index.html">Lab7:<br>Functions</a>
+    <hr class="sidenavhr">
+    <a class="links" href="../lab8/index.html">Lab8:<br>Anon Functions and Callbacks</a>
+    <hr class="sidenavhr">
+    <a class="links" href="../test/index.html">test_placeholder</a>
+    <hr class="sidenavhr">
+    <a class="links" href="../test/index.html">test_placeholder</a>
+    <hr class="sidenavhr">
+    <a class="links" href="../test/index.html">test_placeholder</a>
+    <hr class="sidenavhr">
+    <a class="links" href="../test/index.html">test_placeholder</a>
+  </div>
+
+  <span id="menubutton" onclick="sidenavControl()"></span>
+</html>

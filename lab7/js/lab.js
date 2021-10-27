@@ -1,6 +1,5 @@
 // Author: Tiange Wei
 // Date: 10/22/2021
-// Description:
 
 
 var isClicked;
