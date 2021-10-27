@@ -16,7 +16,7 @@
 
       <div class="block">
         <h1>Challenge</h1>
-        <p>Writing my own callback function took me a while. When I tried to call the function within the javascript file, it failed all the time. Then I figured out that this time we put scripts under "head", so that it's rendered before the page loads. I then used <i>window.onload</i> to call the functions after the page is loaded.</p>
+        <p>Writing my own callback function took me a while. When I tried to call the function within the javascript file, it failed all the time. Then I figured out that this time we put scripts under "head", so that it's rendered before the page loads. I then used <i style="color:blue">window.onload</i> to call the functions after the page is loaded.</p>
       </div>
 
       <div class="block">
@@ -33,11 +33,11 @@
         <p id="js_output5"></p>
         <p id="js_output6">
           My callback function:<br><br>
-          <i>function testCallbackFunction(para, callback) {<br><br>
+          <i style="color:blue">function testCallbackFunction(para, callback) {<br><br>
             if (typeof callback == "function") {<br><br>
               document.getElementById("js_output5").innerHTML = "This is the test of callback checkDivideByThree(10): " + callback(para);
             }
-          }<i><br><br>
+          }</i><br><br>
         </p>
         <script type="text/javascript">
           window.onload = runInHTML;
