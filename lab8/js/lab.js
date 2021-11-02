@@ -41,3 +41,5 @@ function runInHTML() {
   document.getElementById("js_output4").innerHTML = "Result of checkDivideByThree(): " + arr.map(checkDivideByThree);
   testCallbackFunction(10, checkDivideByThree);
 }
+
+runInHTML()

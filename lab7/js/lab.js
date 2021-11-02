@@ -95,7 +95,23 @@ function movePopupWindow(targetLocation) {
 }
 
 function changeButtonText() {
-  document.getElementById("popupbutton").innerText = "Submit";
+
+  document.addEventListener("input", function() {
+    var inputEl = document.getElementById("popupinput").value
+    if (inputEl.length >= 1) {
+      document.getElementById("popupbutton").innerText = "Submit";
+    } else {
+      document.getElementById("popupinput").innerText = "Cancel";
+    }
+  })
+
+  // var inputEl = document.getElementById("popupinput").value
+  // if (inputEl.length >= 1) {
+  //   document.getElementById("popupbutton").innerText = "Submit";
+  // } else {
+  //   document.getElementById("popupinput").innerText = "Cancel";
+  // }
+
 }
 
 function popupSubmitButton() {
@@ -182,7 +198,7 @@ function inputPressKeys() {
       document.getElementById("popupbutton").click();
     }
   })
-
+  // press "esc"
   var isPopupVisible = document.getElementById("popupwindow").style.visibility;
   if (isPopupVisible === "visible") {
     document.addEventListener("keyup", function(event) {
