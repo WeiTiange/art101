@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="../css/site.css">
     <link rel="stylesheet" href="css/lab.css">
     <link rel="stylesheet" href="../css/popup.css">
+    <script type="text/javascript" src="js/lab.js" defer></script>
     <title>Lab7: Functions</title>
   </head>
   <body>
@@ -31,7 +32,6 @@
         <div class="js">
           <h4>Your New Name is: </h4>
           <p id="js_output"></p>
-          <script type="text/javascript" src="js/lab.js"></script>
           <h5>Don't Like It?</h5>
           <button type="button" name="button" onclick="generateAnotherOne()">Generate Another One</button>
           <button type="button" name="button" onclick="showPopupWindow()">Use Other Names</button>
@@ -41,7 +41,7 @@
   </body>
   <div id="popupwindow" class="popups" onkeypress="">
     <h3 id="popuptext" class="popups">Hi! Please tell me your name so I can fix it.</h3>
-    <input type="text" id="popupinput" class="popups" oninput="changeButtonText()">
+    <input type="text" id="popupinput" class="popups">
     <button type="button" name="button" id="popupbutton" class="popups" onclick="popupSubmitButton()" onmouseover="hover()" onmouseout="notHover()">Cancel</button>
   </div>
 

@@ -94,25 +94,21 @@ function movePopupWindow(targetLocation) {
   document.getElementById("popupwindow").style.marginTop = targetLocation;
 }
 
-function changeButtonText() {
+// function changeButtonText() {
+//   var buttonEl = document.getElementById("popupbutton");
+//   buttonEl.addEventListener("change", function() {
+//     var inputText = document.getElementById("popupinput").value;
+//     if (inputText.length === 0) {
+//       buttonEl.innerText = "Cancel";
+//     } else {
+//       buttonEl.innerText = "Submit";
+//     }
+//   })
+//
+// }
 
-  document.addEventListener("input", function() {
-    var inputEl = document.getElementById("popupinput").value
-    if (inputEl.length >= 1) {
-      document.getElementById("popupbutton").innerText = "Submit";
-    } else {
-      document.getElementById("popupinput").innerText = "Cancel";
-    }
-  })
 
-  // var inputEl = document.getElementById("popupinput").value
-  // if (inputEl.length >= 1) {
-  //   document.getElementById("popupbutton").innerText = "Submit";
-  // } else {
-  //   document.getElementById("popupinput").innerText = "Cancel";
-  // }
 
-}
 
 function popupSubmitButton() {
   userName = document.getElementById("popupinput").value.split("");
@@ -212,6 +208,20 @@ function inputPressKeys() {
 
 //End of Funcitons.
 
+
+var buttonEl = document.getElementById("popupbutton");
+var inputEl = document.getElementById("popupinput");
+
+
+inputEl.addEventListener("input", function() {
+  var inputText = document.getElementById("popupinput").value;
+  console.log(inputText.length);
+  if (inputText.length === 0) {
+    buttonEl.innerText = "Cancel";
+  } else {
+    buttonEl.innerText = "Submit";
+  }
+})
 
 
 
