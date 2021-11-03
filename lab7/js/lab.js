@@ -94,22 +94,6 @@ function movePopupWindow(targetLocation) {
   document.getElementById("popupwindow").style.marginTop = targetLocation;
 }
 
-// function changeButtonText() {
-//   var buttonEl = document.getElementById("popupbutton");
-//   buttonEl.addEventListener("change", function() {
-//     var inputText = document.getElementById("popupinput").value;
-//     if (inputText.length === 0) {
-//       buttonEl.innerText = "Cancel";
-//     } else {
-//       buttonEl.innerText = "Submit";
-//     }
-//   })
-//
-// }
-
-
-
-
 function popupSubmitButton() {
   userName = document.getElementById("popupinput").value.split("");
   var newName = shuffleArray(sortUserName(userName));
@@ -138,10 +122,10 @@ function shuffleArray(arr) {
   while (0 !== curIndex) {
     ranIndex = Math.floor(Math.random() * curIndex);
     curIndex -= 1;
-  tempVal = arr[curIndex];
-  arr[curIndex] = arr[ranIndex];
-  arr[ranIndex] = tempVal;
-}
+    tempVal = arr[curIndex];
+    arr[curIndex] = arr[ranIndex];
+    arr[ranIndex] = tempVal;
+  }
 
   return arr;
 };
@@ -161,7 +145,7 @@ function upperCaseFirstLetter(arr) {
 
   //Use boolean to check if the current letter is the first letter after a space.
   var isFirstLetter = true;
-  for (i = 0; i < arr.length; i ++) {
+  for (var i = 0; i < arr.length; i ++) {
     //If the current letter is the first letter after a space, upper case it.
     if (isFirstLetter == true) {
       arr[i] = arr[i].toUpperCase();
