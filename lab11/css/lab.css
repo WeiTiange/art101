@@ -1,0 +1,17 @@
+.red {
+  color: red;
+}
+
+.black {
+  color: black;
+}
+
+.button1 {
+  color: gold;
+  background-color: black;
+}
+
+.button2 {
+  color: white;
+  background-color: rgb(220,0,50);
+}
