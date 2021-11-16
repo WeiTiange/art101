@@ -1,0 +1,16 @@
+b {
+  color: rgb(0,150,220);
+}
+
+#button {
+  padding: 10px 10px 10px 10px;
+  margin-left: 20px;
+}
+
+input {
+  height: 30px;
+  border-radius: 15px;
+  font-size: 20px;
+  margin-left: 0px;
+  padding-left: 10px;
+}
